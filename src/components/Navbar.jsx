@@ -28,6 +28,7 @@ const Navbar = () => {
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52  shadow text-black text-lg font-medium p-4">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/adventures">Adventures</NavLink>
+        <NavLink to="/myProfile">My Profile</NavLink>
         <NavLink to="/updateProfile">Update Profile</NavLink>
         <span className="w-12 h-12 rounded-full bg-white flex justify-center items-center text-xl border-4 border-lime-900 mt-4"><FaUser></FaUser></span>
     <Link to="/login" className="btn bg-lime-white  px-6 text-lg font-bold  border-none text-white mt-4 mb-4 bg-lime-900">Login</Link>
@@ -39,6 +40,7 @@ const Navbar = () => {
     <ul className="menu menu-horizontal px-1 text-white font-medium text-base space-x-10">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/adventures">Adventures</NavLink>
+        <NavLink to="/myProfile">My Profile</NavLink>
         <NavLink to="/updateProfile">Update Profile</NavLink>
     </ul>
   </div>
