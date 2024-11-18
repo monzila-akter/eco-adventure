@@ -1,0 +1,231 @@
+[
+    {
+      "id": 1,
+      "title": "Everest Base Camp Trek",
+      "image": "https://i.ibb.co.com/DgL5sJG/Everest-Base-Camp-Trek-in-April.jpg",
+      "category": "Mountain Treks",
+      "shortDescription": "Experience the breathtaking views of the Himalayas on this iconic trek.",
+      "cost": 1200,
+      "bookingAvailability": true,
+      "location": "Nepal",
+      "duration": "14 days",
+      "adventureLevel": "Difficult",
+      "includedItems": ["Guide", "Meals", "Accommodation", "Trekking Permits"],
+      "ecoFriendlyFeatures": ["Local guides", "Minimal plastic use", "Eco-friendly lodges"],
+      "maxGroupSize": 12,
+      "specialInstructions": [
+        "Acclimatize properly to avoid altitude sickness.",
+        "Pack light but ensure warm clothing."
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Great Barrier Reef Dive",
+      "image": "https://i.ibb.co.com/RT187Gz/istockphoto-1472330375-612x612.jpg",
+      "category": "Ocean Dives",
+      "shortDescription": "Explore the vibrant underwater world of the Great Barrier Reef.",
+      "cost": 350,
+      "bookingAvailability": true,
+      "location": "Australia",
+      "duration": "3 days",
+      "adventureLevel": "Moderate",
+      "includedItems": ["Dive gear", "Boat transfers", "Meals", "Instructor"],
+      "ecoFriendlyFeatures": ["Marine-safe sunscreen", "Reef conservation donation", "Eco-certified operators"],
+      "maxGroupSize": 10,
+      "specialInstructions": [
+        "Avoid touching coral to preserve its health.",
+        "Carry your own reusable water bottle."
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Serengeti Safari",
+      "image": "https://i.ibb.co.com/N9LV5Dc/istockphoto-658436570-612x612.jpg",
+      "category": "Wildlife Safaris",
+      "shortDescription": "Witness the majestic wildlife of Africa's Serengeti National Park.",
+      "cost": 2500,
+      "bookingAvailability": true,
+      "location": "Tanzania",
+      "duration": "7 days",
+      "adventureLevel": "Easy",
+      "includedItems": ["Guide", "Meals", "Luxury Tents", "Park Fees"],
+      "ecoFriendlyFeatures": ["Solar-powered camps", "Wildlife conservation efforts", "Zero-waste policies"],
+      "maxGroupSize": 8,
+      "specialInstructions": [
+        "Carry binoculars for better wildlife viewing.",
+        "Respect wildlife and maintain a safe distance."
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Amazon Rainforest Expedition",
+      "image": "https://i.ibb.co.com/tm3d3LW/Exploration-Of-The-Amazon-Rainforest-A-Brief-History.jpg",
+      "category": "Forest Expeditions",
+      "shortDescription": "Explore the diverse ecosystem of the Amazon rainforest.",
+      "cost": 1800,
+      "bookingAvailability": true,
+      "location": "Brazil",
+      "duration": "10 days",
+      "adventureLevel": "Challenging",
+      "includedItems": ["Guide", "Meals", "Camping Gear", "Boat Tours"],
+      "ecoFriendlyFeatures": ["Local indigenous guides", "Leave-no-trace policy", "Organic meals"],
+      "maxGroupSize": 6,
+      "specialInstructions": [
+        "Use biodegradable toiletries.",
+        "Bring lightweight clothing suitable for humidity."
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Desert Safari in the Sahara",
+      "image": "https://i.ibb.co.com/fF90YvN/1-1.jpg",
+      "category": "Desert Exploration",
+      "shortDescription": "Embark on a camel trek through the vast Sahara desert.",
+      "cost": 700,
+      "bookingAvailability": true,
+      "location": "Morocco",
+      "duration": "5 days",
+      "adventureLevel": "Moderate",
+      "includedItems": ["Camel rides", "Meals", "Camping Gear", "Guide"],
+      "ecoFriendlyFeatures": ["Reusable water bottles", "Solar-powered camps", "Minimal waste policies"],
+      "maxGroupSize": 15,
+      "specialInstructions": [
+        "Pack sunscreen and a wide-brimmed hat.",
+        "Avoid unnecessary plastic use."
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Kayaking Adventure on the Colorado River",
+      "image": "https://i.ibb.co.com/HNkQgnc/Colorado-River-kayaking-1024x585.jpg",
+      "category": "River Adventures",
+      "shortDescription": "Paddle through stunning canyons and calm waters.",
+      "cost": 400,
+      "bookingAvailability": true,
+      "location": "USA",
+      "duration": "3 days",
+      "adventureLevel": "Moderate",
+      "includedItems": ["Kayak", "Safety Gear", "Meals", "Guide"],
+      "ecoFriendlyFeatures": ["Eco-friendly gear", "Leave-no-trace principles", "Local guides"],
+      "maxGroupSize": 10,
+      "specialInstructions": [
+        "Wear a life jacket at all times.",
+        "Bring waterproof bags for personal items."
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Mangrove Forest Expedition",
+      "image": "https://i.ibb.co.com/QPQ3hPQ/istockphoto-1688977536-612x612.jpg",
+      "category": "Mangrove Forest Expeditions",
+      "shortDescription": "Discover the unique ecosystem of mangrove forests.",
+      "cost": 300,
+      "bookingAvailability": true,
+      "location": "Bangladesh",
+      "duration": "2 days",
+      "adventureLevel": "Easy",
+      "includedItems": ["Boat Tour", "Guide", "Meals"],
+      "ecoFriendlyFeatures": ["Mangrove conservation donation", "Eco-friendly boats", "Local community involvement"],
+      "maxGroupSize": 8,
+      "specialInstructions": [
+        "Wear mosquito repellent.",
+        "Avoid disturbing the natural habitat."
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Camping Retreat in the Rockies",
+      "image": "https://i.ibb.co.com/1Lg1stS/home-retreat-and-renewal.jpg",
+      "category": "Camping Retreats",
+      "shortDescription": "Reconnect with nature in the heart of the Rockies.",
+      "cost": 500,
+      "bookingAvailability": true,
+      "location": "Canada",
+      "duration": "4 days",
+      "adventureLevel": "Easy",
+      "includedItems": ["Tents", "Meals", "Campfire Activities", "Guide"],
+      "ecoFriendlyFeatures": ["Sustainable camping practices", "Eco-friendly gear", "Minimal impact policies"],
+      "maxGroupSize": 12,
+      "specialInstructions": [
+        "Pack warm layers for nighttime.",
+        "Dispose of waste responsibly."
+      ]
+    },
+    {
+        "id": 9,
+        "title": "Arctic Circle Northern Lights Tour",
+        "image": "https://i.ibb.co.com/tLRcmgY/16.jpg",
+        "category": "Winter Expeditions",
+        "shortDescription": "Marvel at the dazzling Northern Lights in the Arctic Circle.",
+        "cost": 1500,
+        "bookingAvailability": true,
+        "location": "Norway",
+        "duration": "5 days",
+        "adventureLevel": "Moderate",
+        "includedItems": ["Warm Gear", "Guided Tour", "Meals", "Accommodation"],
+        "ecoFriendlyFeatures": ["Small group sizes", "Eco-friendly transport", "Support local businesses"],
+        "maxGroupSize": 10,
+        "specialInstructions": [
+          "Bring thermal clothing.",
+          "Avoid using flash photography to preserve natural wildlife."
+        ]
+      },
+      {
+        "id": 10,
+        "title": "Galapagos Island Wildlife Adventure",
+        "image": "https://i.ibb.co.com/2nmfjnJ/57003ed346cbde420306d87bbe90cb6d.jpg",
+        "category": "Wildlife Expeditions",
+        "shortDescription": "Explore the unique wildlife of the Galápagos Islands.",
+        "cost": 3000,
+        "bookingAvailability": true,
+        "location": "Ecuador",
+        "duration": "8 days",
+        "adventureLevel": "Moderate",
+        "includedItems": ["Boat Trips", "Naturalist Guide", "Meals", "Accommodation"],
+        "ecoFriendlyFeatures": ["Marine conservation efforts", "Low-impact tourism", "Local eco-friendly accommodations"],
+        "maxGroupSize": 12,
+        "specialInstructions": [
+          "Wear comfortable walking shoes.",
+          "Avoid feeding or disturbing the wildlife."
+        ]
+      },
+      {
+        "id": 11,
+        "title": "Patagonia Glacier Hike",
+        "image": "https://i.ibb.co.com/17WW727/senderismo-glaciar-perito-moreno-589x392.jpg",
+        "category": "Mountain Treks",
+        "shortDescription": "Hike through the majestic glaciers of Patagonia.",
+        "cost": 2500,
+        "bookingAvailability": true,
+        "location": "Argentina/Chile",
+        "duration": "6 days",
+        "adventureLevel": "Difficult",
+        "includedItems": ["Guide", "Safety Gear", "Meals", "Camping Gear"],
+        "ecoFriendlyFeatures": ["Sustainable trekking practices", "Support for local conservation projects", "No single-use plastics"],
+        "maxGroupSize": 8,
+        "specialInstructions": [
+          "Ensure proper footwear for ice trekking.",
+          "Pack lightweight and eco-friendly gear."
+        ]
+      },
+      {
+        "id": 12,
+        "title": "Coral Reef Restoration Adventure",
+        "image": "https://i.ibb.co.com/Tw0j5vC/image-large.jpg",
+        "category": "Ocean Dives",
+        "shortDescription": "Participate in hands-on coral reef restoration efforts.",
+        "cost": 1000,
+        "bookingAvailability": true,
+        "location": "Indonesia",
+        "duration": "5 days",
+        "adventureLevel": "Moderate",
+        "includedItems": ["Dive Gear", "Restoration Training", "Meals", "Accommodation"],
+        "ecoFriendlyFeatures": ["Active reef restoration", "Marine-safe dive practices", "Community education initiatives"],
+        "maxGroupSize": 6,
+        "specialInstructions": [
+          "Follow restoration guidelines carefully.",
+          "Avoid wearing harmful chemical-based sunscreens."
+        ]
+      }
+  ]
+  
