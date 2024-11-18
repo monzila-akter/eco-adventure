@@ -7,6 +7,7 @@ import UserProfile from "../pages/UserProfile";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Adventures from "../pages/Adventures";
+import Details from "../components/Details";
 
 
 const router = createBrowserRouter([
@@ -39,6 +40,17 @@ const router = createBrowserRouter([
         {
             path: "/register",
             element: <Register></Register>
+        },
+        {
+            path: "/details/:id",
+            element: <Details></Details>,
+            loader: async({params})=>{
+                const res = await fetch("/adventure.json")
+                const data = await res.json()
+                const singleData = await data.find(d => d.id == params.id)
+
+                return singleData;
+            }
         }
       ]
     },

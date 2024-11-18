@@ -4,6 +4,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 import AdventureCard from '../components/AdventureCard';
 import Explore from '../components/Explore';
 import Banner from '../components/Banner';
+import PricePackage from '../components/PricePackage';
 
 const Home = () => {
 
@@ -28,6 +29,7 @@ const Home = () => {
              </div>
            
            <Explore></Explore>
+           <PricePackage></PricePackage>
         </div>
     );
 };

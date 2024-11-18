@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const AdventureCard = ({ adventure }) => {
-  const { title, image, ecoFriendlyFeatures } = adventure;
+  const { title, image, ecoFriendlyFeatures, id } = adventure;
 
   return (
     <div className="card bg-white shadow-md p-6 border transition hover:scale-105 rounded-lg">
@@ -25,9 +26,9 @@ const AdventureCard = ({ adventure }) => {
       </ul>
 
       {/* Explore Now Button */}
-      <button className="btn btn-primary w-full bg-lime-800 hover:bg-green-700 text-white text-xl">
+      <Link to={`/details/${id}`}><button className="btn btn-primary w-full bg-lime-800 hover:bg-green-700 text-white text-xl">
         Explore Now
-      </button>
+      </button></Link>
     </div>
   );
 };
