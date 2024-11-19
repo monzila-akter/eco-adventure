@@ -8,12 +8,14 @@ import Register from "../pages/Register";
 import Adventures from "../pages/Adventures";
 import Details from "../components/Details";
 import MyProfile from "../pages/MyProfile";
+import ErrorPage from "../pages/ErrorPage";
 
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <MainLayout></MainLayout>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
             path: "/",

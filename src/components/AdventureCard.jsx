@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const AdventureCard = ({ adventure }) => {
   const { title, image, ecoFriendlyFeatures, id } = adventure;
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: true, 
+    });
+  }, []);
+
   return (
-    <div className="card bg-white shadow-md p-6 border transition hover:scale-105 rounded-lg">
+    <div
+    data-aos="flip-right" // AOS animation type
+    data-aos-delay="100" // Delay before the animation starts
+     className="card bg-white shadow-md p-6 border transition hover:scale-105 rounded-lg">
       {/* Adventure Image */}
       <img
         src={image}

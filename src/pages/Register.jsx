@@ -1,8 +1,11 @@
-import React from "react";
-import { FaGoogle } from "react-icons/fa";
+import React, { useState } from "react";
+import {FaEye,  FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Register = () => {
+
+    const [showPassword, setShowPassword] = useState(false);
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 py-14">
       <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-lg">
@@ -63,7 +66,7 @@ const Register = () => {
           </div>
 
           {/* Password Field */}
-          <div className="mb-4">
+          <div className="mb-4 relative">
             <label
               htmlFor="password"
               className="block text-gray-700 font-medium mb-2"
@@ -71,12 +74,19 @@ const Register = () => {
               Password
             </label>
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               id="password"
               name="password"
               placeholder="Enter your password"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-800 focus:border-transparent"
             />
+            <button
+            onClick={() => setShowPassword(!showPassword)}
+             className="absolute right-6 top-[45px] text-gray-500 text-lg">
+                {
+                showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                 }
+             </button>
           </div>
 
           {/* Login Button */}
