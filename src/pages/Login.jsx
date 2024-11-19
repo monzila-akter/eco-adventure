@@ -1,13 +1,16 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
+import { sendPasswordResetEmail } from "firebase/auth";
+import auth from "../components/firebase_init";
 
 const Login = () => {
 
 const [showPassword, setShowPassword] = useState(false)
 const [error, setError] = useState("");
+const emailRef = useRef();
 
 const {loginUser, setUser} = useContext(AuthContext);
 
@@ -43,6 +46,21 @@ const handleSubmit = (e) => {
     })
 }
 
+const handleForgetPassword = () => {
+    const email = emailRef.current.value;
+    console.log(email)
+   
+    if(!email){
+        return toast.warning("Please provide a valid email address.")
+    }
+    else {
+        sendPasswordResetEmail(auth, email)
+        .then(()=> {
+            return toast.success("Password reset email sent, please check your email")
+        })
+    }
+}
+
   return (
     <div className="py-16 flex items-center justify-center bg-gray-100">
       <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-lg">
@@ -64,6 +82,7 @@ const handleSubmit = (e) => {
             <input
               type="email"
               name="email"
+              ref={emailRef}
               placeholder="Enter your email"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-800 focus:border-transparent"
               required
@@ -82,7 +101,7 @@ const handleSubmit = (e) => {
               type={showPassword ? "text" : "password"}
               name="password"
               placeholder="Enter your password"
-              className={`w-full px-4 py-2 ${error ? "border-red-500 focus:ring-red-500" : ""} border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-800 focus:border-transparent`}
+              className={`w-full px-4  py-2 ${error ? "border-red-500 focus:ring-red-500" : ""} border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-800 focus:border-transparent`}
               required
             />
             <button
@@ -95,16 +114,19 @@ const handleSubmit = (e) => {
              {
                 error ? <p className="text-sm text-red-500 mt-4">{error}</p> : ""
              }
+          
           </div>
-          {/* Forget Password */}
-          <div className="mb-4">
+               {/* Forget Password */}
+               <div className="mb-4">
+               <label onClick={handleForgetPassword} >
             <a
-              href="/forget-password"
+              href=""
               className="text-sm text-lime-800 hover:underline"
             >
               Forget Password?
             </a>
-          </div>
+          </label>
+               </div>
 
           {/* Login Button */}
           <div>

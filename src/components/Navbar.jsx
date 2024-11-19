@@ -35,7 +35,9 @@ const Navbar = () => {
         <NavLink to="/adventures">Adventures</NavLink>
         <NavLink to="/myProfile">My Profile</NavLink>
         <NavLink to="/updateProfile">Update Profile</NavLink>
-        <span className="w-12 h-12 rounded-full bg-white flex justify-center items-center text-xl border-4 border-lime-900 mt-4"><FaUser></FaUser></span>
+        {
+          user && user?.email ? <img title={user?.displayName} className="w-12 h-12 rounded-full border-2 border-lime-800 object-cover cursor-pointer" src={user?.photoURL}></img> : <span className="w-12 h-12 rounded-full bg-white flex justify-center items-center text-xl border-4 border-lime-900 mt-4"><FaUser></FaUser></span>
+        }
     {
       user && user?.email ? <button onClick={logOut} className="btn  px-6 text-lg font-bold  border-none text-white mt-4 mb-4 bg-lime-900">Log Out</button> : <Link to="/login" className="btn   px-6 text-lg font-bold  border-none text-white mt-4 mb-4 bg-lime-900">Login</Link>
     }
@@ -52,9 +54,11 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end space-x-3  items-center hidden lg:flex">
-    <span className="w-12 h-12 rounded-full bg-white flex justify-center items-center text-xl border-4 border-lime-900"><FaUser></FaUser></span>
+   {
+    user && user?.email ? <div><img title={user?.displayName} className="w-12 h-12 rounded-full object-cover border-2 border-white cursor-pointer" src={user?.photoURL} alt="" /></div> :  <span className="w-12 h-12 rounded-full border-2 border-white bg-transparent flex justify-center items-center text-xl text-white"><FaUser></FaUser></span>
+   }
     {
-      user && user?.email ? <button onClick={logOut}  className="btn   px-6 text-lg font-bold  border-none text-black bg-white">Log Out</button> : <Link to="/login" className="btn   px-6 text-lg font-bold  border-none text-black bg-white">Login</Link>
+      user && user?.email ? <button onClick={logOut}  className="btn   px-6 text-lg font-bold text-white border-2 border-white bg-transparent">Log Out</button> : <Link to="/login" className="btn   px-6 text-lg font-bold text-white border-2 border-white bg-transparent">Login</Link>
     }
   </div>
 </div>
