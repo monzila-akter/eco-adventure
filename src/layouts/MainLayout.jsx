@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { useEffect } from "react";
+import { Toaster } from "react-hot-toast";
 
 
 const MainLayout = () => {
@@ -26,6 +27,7 @@ const MainLayout = () => {
 
     return (
         <div>
+            <Toaster></Toaster>
             {/* Navbar here */}
             <Navbar></Navbar>
             {/* Dynamic sections */}

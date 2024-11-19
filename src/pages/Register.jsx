@@ -1,29 +1,44 @@
 import React, { useContext, useState } from "react";
 import {FaEye,  FaEyeSlash, FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Register = () => {
     
     const {createNewUser, setUser} = useContext(AuthContext);
 
     const [showPassword, setShowPassword] = useState(false);
+    const [error, setError] = useState("");
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setError("");
         const name = e.target.name.value;
         const image = e.target.image.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(name, image, email, password)
+        // console.log(name, image, email, password)
+
+        if(password.length < 6){
+            return setError("Password must contain at least 6 character!")
+        }else if(!/[A-Z]/.test(password)){
+            return setError("Password must contain at least one uppercase letter.")
+        }else if(!/[a-z]/.test(password)){
+            return setError("Password must contain at least one lowercase letter.")
+        }
 
         createNewUser(email, password)
         .then(result => {
             // console.log(result.user)
             setUser(result.user)
+            navigate("/")
+            toast.success("Registered successfully")
         })
         .catch(err => {
             console.log(err.message)
+            return toast.error(err.message)
         })
     }
 
@@ -100,7 +115,7 @@ const Register = () => {
               type={showPassword ? "text" : "password"}
               name="password"
               placeholder="Enter your password"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-800 focus:border-transparent"
+              className={`w-full px-4 py-2 ${error ? "border-red-500 focus:ring-red-500" : ""} border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-800 focus:border-transparent`}
               required
             />
             <button
@@ -110,6 +125,9 @@ const Register = () => {
                 showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
                  }
              </button>
+             {
+                error ? <p className="text-sm text-red-500 mt-4">{error}</p> : ""
+             }
           </div>
 
           {/* Login Button */}

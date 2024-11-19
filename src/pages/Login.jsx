@@ -1,10 +1,47 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
 
 const [showPassword, setShowPassword] = useState(false)
+const [error, setError] = useState("");
+
+const {loginUser, setUser} = useContext(AuthContext);
+
+const location = useLocation();
+const navigate = useNavigate();
+
+const handleSubmit = (e) => {
+    e.preventDefault();
+     setError("")
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    if(password.length < 6){
+        return setError("Password must contain at least 6 character!")
+    }else if(!/[A-Z]/.test(password)){
+        return setError("Password must contain at least one uppercase letter.")
+    }else if(!/[a-z]/.test(password)){
+        return setError("Password must contain at least one lowercase letter.")
+    }
+
+    loginUser(email, password)
+    .then(result => {
+        console.log(result.user)
+        setUser(result.user);
+        toast.success("Logged in successfully!")
+        navigate(location?.state ? location.state : "/")
+        
+    })
+    .catch(err => {
+        console.log(err.message)
+       return toast.error(err.message);
+       
+    })
+}
 
   return (
     <div className="py-16 flex items-center justify-center bg-gray-100">
@@ -15,7 +52,7 @@ const [showPassword, setShowPassword] = useState(false)
         </h1>
 
         {/* Login Form */}
-        <form>
+        <form onSubmit={handleSubmit}>
           {/* Email Field */}
           <div className="mb-4">
             <label
@@ -45,7 +82,7 @@ const [showPassword, setShowPassword] = useState(false)
               type={showPassword ? "text" : "password"}
               name="password"
               placeholder="Enter your password"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-800 focus:border-transparent"
+              className={`w-full px-4 py-2 ${error ? "border-red-500 focus:ring-red-500" : ""} border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-800 focus:border-transparent`}
               required
             />
             <button
@@ -55,6 +92,9 @@ const [showPassword, setShowPassword] = useState(false)
                 showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
                  }
              </button>
+             {
+                error ? <p className="text-sm text-red-500 mt-4">{error}</p> : ""
+             }
           </div>
           {/* Forget Password */}
           <div className="mb-4">

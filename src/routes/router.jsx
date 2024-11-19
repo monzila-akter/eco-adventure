@@ -9,6 +9,7 @@ import Adventures from "../pages/Adventures";
 import Details from "../components/Details";
 import MyProfile from "../pages/MyProfile";
 import ErrorPage from "../pages/ErrorPage";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -45,7 +46,9 @@ const router = createBrowserRouter([
         },
         {
             path: "/details/:id",
-            element: <Details></Details>,
+            element: <PrivateRoute>
+                <Details></Details>
+            </PrivateRoute>,
             loader: async({params})=>{
                 const res = await fetch("/adventure.json")
                 const data = await res.json()
