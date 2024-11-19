@@ -1,21 +1,42 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import {FaEye,  FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Register = () => {
+    
+    const {createNewUser, setUser} = useContext(AuthContext);
 
     const [showPassword, setShowPassword] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const name = e.target.name.value;
+        const image = e.target.image.value;
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        console.log(name, image, email, password)
+
+        createNewUser(email, password)
+        .then(result => {
+            // console.log(result.user)
+            setUser(result.user)
+        })
+        .catch(err => {
+            console.log(err.message)
+        })
+    }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 py-14">
       <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-lg">
         {/* Title */}
         <h1 className="text-2xl font-bold text-center text-lime-800 mb-6">
-          Log in to Your Account
+          Register to get started
         </h1>
 
         {/* Login Form */}
-        <form>
+        <form onSubmit={handleSubmit}>
           {/* Name Field */}
           <div className="mb-4">
             <label
@@ -29,6 +50,7 @@ const Register = () => {
               name="name"
               placeholder="Enter your name"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-800 focus:border-transparent"
+              required
             />
           </div>
 
@@ -45,6 +67,7 @@ const Register = () => {
               name="image"
               placeholder="photo url"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-800 focus:border-transparent"
+              required
             />
           </div>
 
@@ -58,10 +81,10 @@ const Register = () => {
             </label>
             <input
               type="email"
-              id="email"
               name="email"
               placeholder="Enter your email"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-800 focus:border-transparent"
+              required
             />
           </div>
 
@@ -75,10 +98,10 @@ const Register = () => {
             </label>
             <input
               type={showPassword ? "text" : "password"}
-              id="password"
               name="password"
               placeholder="Enter your password"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-800 focus:border-transparent"
+              required
             />
             <button
             onClick={() => setShowPassword(!showPassword)}

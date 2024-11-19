@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaUser } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 import "./navbar.css"
+import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = () => {
+
+  const {user, logOut} = useContext(AuthContext);
+  console.log(user);
+
   return (
     <div className="bg-lime-900  py-4">
         <div className="navbar w-11/12 mx-auto">
@@ -31,7 +36,9 @@ const Navbar = () => {
         <NavLink to="/myProfile">My Profile</NavLink>
         <NavLink to="/updateProfile">Update Profile</NavLink>
         <span className="w-12 h-12 rounded-full bg-white flex justify-center items-center text-xl border-4 border-lime-900 mt-4"><FaUser></FaUser></span>
-    <Link to="/login" className="btn bg-lime-white  px-6 text-lg font-bold  border-none text-white mt-4 mb-4 bg-lime-900">Login</Link>
+    {
+      user && user?.email ? <button onClick={logOut} className="btn  px-6 text-lg font-bold  border-none text-white mt-4 mb-4 bg-lime-900">Log Out</button> : <Link to="/login" className="btn   px-6 text-lg font-bold  border-none text-white mt-4 mb-4 bg-lime-900">Login</Link>
+    }
       </ul>
     </div>
     <Link to="/" className="font-bold btn btn-ghost text-xl text-white"><span>ECO ADVENTURE</span></Link>
@@ -46,7 +53,9 @@ const Navbar = () => {
   </div>
   <div className="navbar-end space-x-3  items-center hidden lg:flex">
     <span className="w-12 h-12 rounded-full bg-white flex justify-center items-center text-xl border-4 border-lime-900"><FaUser></FaUser></span>
-    <Link to="/login" className="btn bg-lime-white  px-6 text-lg font-bold  border-none text-black bg-white">Login</Link>
+    {
+      user && user?.email ? <button onClick={logOut}  className="btn   px-6 text-lg font-bold  border-none text-black bg-white">Log Out</button> : <Link to="/login" className="btn   px-6 text-lg font-bold  border-none text-black bg-white">Login</Link>
+    }
   </div>
 </div>
     </div>

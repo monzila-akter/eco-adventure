@@ -16,8 +16,8 @@ const AdventureCard = ({ adventure }) => {
 
   return (
     <div
-    data-aos="flip-right" // AOS animation type
-    data-aos-delay="100" // Delay before the animation starts
+    data-aos="flip-right" 
+    data-aos-delay="100" 
      className="card bg-white shadow-md p-6 border transition hover:scale-105 rounded-lg">
       {/* Adventure Image */}
       <img
