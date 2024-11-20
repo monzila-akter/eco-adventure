@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 
 const Register = () => {
     
-    const {createNewUser, setUser, updateUserProfile} = useContext(AuthContext);
+    const {createNewUser, setUser, updateUserProfile, googleLogin} = useContext(AuthContext);
 
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState("");
@@ -44,6 +44,15 @@ const Register = () => {
             console.log(err.message)
             return toast.error(err.message)
         })
+    }
+
+    const handleGoogleLogin = () => {
+        googleLogin()
+        .then(result => {
+            setUser(result.user)
+            navigate("/")
+        })
+        
     }
 
   return (
@@ -155,7 +164,7 @@ const Register = () => {
         {/* Google Login Button */}
         <div className="mb-5">
           <button
-            
+            onClick={handleGoogleLogin}
             className="w-full flex items-center justify-center bg-white border-2 border-lime-800 text-lg font-semibold text-lime-700 py-2 px-4 rounded-lg hover:bg-gray-100 "
           >
             <FaGoogle className="mr-2"></FaGoogle>

@@ -12,7 +12,7 @@ const [showPassword, setShowPassword] = useState(false)
 const [error, setError] = useState("");
 const emailRef = useRef();
 
-const {loginUser, setUser} = useContext(AuthContext);
+const {loginUser, setUser, googleLogin} = useContext(AuthContext);
 
 const location = useLocation();
 const navigate = useNavigate();
@@ -46,20 +46,33 @@ const handleSubmit = (e) => {
     })
 }
 
-const handleForgetPassword = () => {
-    const email = emailRef.current.value;
-    console.log(email)
-   
-    if(!email){
-        return toast.warning("Please provide a valid email address.")
-    }
-    else {
-        sendPasswordResetEmail(auth, email)
-        .then(()=> {
-            return toast.success("Password reset email sent, please check your email")
-        })
-    }
+const handleGoogleLogin = () => {
+    googleLogin()
+    .then(result => {
+        setUser(result.user)
+        navigate(location?.state ? location?.state : "/")
+    })
+    
 }
+
+const handleForgetPassword = () => {
+    const email = emailRef.current?.value;
+
+    if (!email) {
+      toast.warning("Please provide a valid email address.");
+      return;
+    }
+
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        toast.success("Reset email sent! Please check your email.");
+      })
+      .catch((error) => {
+        console.error("Error sending password reset email:", error.message);
+        toast.error("Failed to send reset email. Please try again."); 
+      });
+  };
+
 
   return (
     <div className="py-16 flex items-center justify-center bg-gray-100">
@@ -90,7 +103,7 @@ const handleForgetPassword = () => {
           </div>
 
           {/* Password Field */}
-          <div className="mb-4 relative">
+          <div className="mb-2 relative">
             <label
               htmlFor="password"
               className="block text-gray-700 font-medium mb-2"
@@ -117,14 +130,9 @@ const handleForgetPassword = () => {
           
           </div>
                {/* Forget Password */}
-               <div className="mb-4">
-               <label onClick={handleForgetPassword} >
-            <a
-              href=""
-              className="text-sm text-lime-800 hover:underline"
-            >
-              Forget Password?
-            </a>
+               <div className="mb-3">
+               <label className="label">
+            <a onClick={handleForgetPassword} href="#" className="label-text-alt link link-hover text-lime-800 text-sm">Forgot password?</a>
           </label>
                </div>
 
@@ -149,7 +157,7 @@ const handleForgetPassword = () => {
         {/* Google Login Button */}
         <div className="mb-5">
           <button
-            
+            onClick={handleGoogleLogin}
             className="w-full flex items-center justify-center bg-white border-2 border-lime-800 text-lg font-semibold text-lime-700 py-2 px-4 rounded-lg hover:bg-gray-100 "
           >
             <FaGoogle className="mr-2"></FaGoogle>
