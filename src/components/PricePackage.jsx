@@ -39,7 +39,7 @@ const PricePackage = () => {
                 Enjoy a delightful experience with all basic facilities included.
               </p>
               <button className="mt-9 bg-lime-800 text-white px-6 py-2 rounded-full hover:bg-lime-900">
-                Book Now →
+                Learn More
               </button>
             </div>
           </div>
@@ -61,7 +61,7 @@ const PricePackage = () => {
                 Perfect for families looking for a shared adventure together.
               </p>
               <button className="mt-9 bg-lime-800 text-white px-6 py-2 rounded-full hover:bg-lime-900">
-                Book Now →
+                Learn More
               </button>
             </div>
           </div>
@@ -83,7 +83,7 @@ const PricePackage = () => {
                 Premium services for business groups and exclusive travelers.
               </p>
               <button className="mt-9 bg-lime-800 text-white px-6 py-2 rounded-full hover:bg-lime-900">
-                Book Now →
+                Learn More
               </button>
             </div>
           </div>

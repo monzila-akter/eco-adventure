@@ -55,23 +55,6 @@ const handleGoogleLogin = () => {
     
 }
 
-const handleForgetPassword = () => {
-    const email = emailRef.current?.value;
-
-    if (!email) {
-      toast.warning("Please provide a valid email address.");
-      return;
-    }
-
-    sendPasswordResetEmail(auth, email)
-      .then(() => {
-        toast.success("Reset email sent! Please check your email.");
-      })
-      .catch((error) => {
-        console.error("Error sending password reset email:", error.message);
-        toast.error("Failed to send reset email. Please try again."); 
-      });
-  };
 
 
   return (
@@ -132,7 +115,8 @@ const handleForgetPassword = () => {
                {/* Forget Password */}
                <div className="mb-3">
                <label className="label">
-            <a onClick={handleForgetPassword} href="#" className="label-text-alt link link-hover text-lime-800 text-sm">Forgot password?</a>
+            <a onClick={()=>navigate("/forgetPassword",{
+           state: { email: emailRef.current?.value || "" }})} href="#" className="label-text-alt link link-hover text-lime-800 text-sm">Forgot password?</a>
           </label>
                </div>
 

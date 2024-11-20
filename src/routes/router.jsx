@@ -10,6 +10,7 @@ import Details from "../components/Details";
 import MyProfile from "../pages/MyProfile";
 import ErrorPage from "../pages/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
+import ForgetPassword from "../components/ForgetPassword";
 
 
 const router = createBrowserRouter([
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
 
                 return singleData;
             }
+        },
+        {
+            path: "/forgetPassword",
+            element: <ForgetPassword></ForgetPassword>
         }
       ]
     },
