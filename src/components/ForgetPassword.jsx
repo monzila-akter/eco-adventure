@@ -39,7 +39,7 @@ const ForgetPassword = () => {
   };
 
   return (
-    <div className="py-16 flex items-center justify-center bg-gray-100">
+    <div className="py-16 px-5 md:px-0 flex items-center justify-center bg-gray-100">
       <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-lg">
         <h1 className="text-2xl font-bold text-center text-lime-800 mb-6">
           Reset Your Password

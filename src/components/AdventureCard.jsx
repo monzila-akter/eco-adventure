@@ -31,6 +31,7 @@ const AdventureCard = ({ adventure }) => {
 
       {/* Eco-Friendly Features */}
       <ul className="text-sm text-gray-600 mb-4">
+        <p className="text-base font-bold text-gray-500 mb-2">Eco Friendly Features:</p>
         {ecoFriendlyFeatures.map((feature, index) => (
           <li key={index} className="list-disc list-inside">
             {feature}
@@ -39,7 +40,7 @@ const AdventureCard = ({ adventure }) => {
       </ul>
 
       {/* Explore Now Button */}
-      <Link to={`/details/${id}`}><button className="btn btn-primary w-full bg-lime-800 hover:bg-green-700 text-white text-xl">
+      <Link to={`/details/${id}`}><button className="btn btn-primary w-full bg-lime-800 hover:bg-green-700 text-white text-xl border-none">
         Explore Now
       </button></Link>
     </div>
