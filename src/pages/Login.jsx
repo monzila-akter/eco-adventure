@@ -49,7 +49,7 @@ const handleGoogleLogin = () => {
 
 
   return (
-    <div className="py-16 flex items-center justify-center bg-gray-100">
+    <div className="py-16 px-5 md:px-0 flex items-center justify-center bg-gray-100">
       <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-lg">
         {/* Title */}
         <h1 className="text-2xl font-bold text-center text-lime-800 mb-6">
@@ -91,13 +91,13 @@ const handleGoogleLogin = () => {
               className="w-full px-4  py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-800 focus:border-transparent"
               required
             />
-            <button
+            <div
             onClick={() => setShowPassword(!showPassword)}
              className="absolute right-6 top-[45px] text-gray-500 text-lg">
                 {
                 showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
                  }
-             </button>
+             </div>
           
           </div>
                {/* Forget Password */}

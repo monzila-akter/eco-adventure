@@ -2,7 +2,7 @@
 
 ## 1. Project Name :
 
-- Eco Adventure
+- ## Eco Adventure
 
 ## 2.The purpose of this project is to provide a secure platform for users to:
 

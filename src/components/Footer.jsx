@@ -58,7 +58,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/update-profile"
+                  to="/updateProfile"
                   className="hover:text-gray-300 flex items-center space-x-2"
                 >
                   Update Profile
@@ -66,7 +66,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/more-adventures"
+                  to="/adventures"
                   className="hover:text-gray-300 flex items-center space-x-2"
                 >
                   Adventures
@@ -74,7 +74,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/about-us"
+                  to="/"
                   className="hover:text-gray-300 flex items-center space-x-2"
                 >
                   About Us
@@ -82,7 +82,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/contact"
+                  to="/"
                   className="hover:text-gray-300 flex items-center space-x-2"
                 >
                   Contact

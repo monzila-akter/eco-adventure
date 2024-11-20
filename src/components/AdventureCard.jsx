@@ -15,10 +15,11 @@ const AdventureCard = ({ adventure }) => {
   }, []);
 
   return (
-    <div
+    <div className="transition-transform hover:scale-105">
+        <div
     data-aos="flip-right" 
     data-aos-delay="100" 
-     className="card bg-white shadow-md p-6 border transition hover:scale-105 rounded-lg">
+     className=" bg-white shadow-md p-6 border  rounded-lg">
       {/* Adventure Image */}
       <img
         src={image}
@@ -27,7 +28,7 @@ const AdventureCard = ({ adventure }) => {
       />
 
       {/* Adventure Title */}
-      <h2 className="text-lg font-bold mb-2">{title}</h2>
+      <h2 className="text-lg font-bold text-lime-800 mb-2">{title}</h2>
 
       {/* Eco-Friendly Features */}
       <ul className="text-sm text-gray-600 mb-4">
@@ -43,6 +44,7 @@ const AdventureCard = ({ adventure }) => {
       <Link to={`/details/${id}`}><button className="btn btn-primary w-full bg-lime-800 hover:bg-green-700 text-white text-xl border-none">
         Explore Now
       </button></Link>
+    </div>
     </div>
   );
 };

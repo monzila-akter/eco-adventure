@@ -72,7 +72,7 @@ const Explore = () => {
             <img
               src="https://i.ibb.co.com/fF90YvN/1-1.jpg"
               alt=""
-              className="w-full h-56 object-cover"
+              className="w-full h-56 object-cover transition-transform"
             />
           </div>
           {/* Top Right Image */}

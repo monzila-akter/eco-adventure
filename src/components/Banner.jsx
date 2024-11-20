@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Banner = () => {
-  const [currentSlide, setCurrentSlide] = useState(1); 
+  const [currentSlide, setCurrentSlide] = useState(1);
 
   const handleNext = () => {
     setCurrentSlide((prev) => (prev === 3 ? 1 : prev + 1));
@@ -16,6 +16,7 @@ const Banner = () => {
       <div className="carousel w-full h-[500px] mx-auto">
         {/* Slide 1 */}
         <div
+        
           className={`carousel-item relative w-full ${
             currentSlide === 1 ? "block" : "hidden"
           }`}

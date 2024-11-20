@@ -56,7 +56,7 @@ const Register = () => {
     }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 py-14">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 py-16 px-5 md:px-0">
       <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-lg">
         {/* Title */}
         <h1 className="text-2xl font-bold text-center text-lime-800 mb-6">
@@ -131,13 +131,13 @@ const Register = () => {
               className={`w-full px-4 py-2 ${error ? "border-red-500 focus:ring-red-500" : ""} border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-800 focus:border-transparent`}
               required
             />
-            <button
+            <div
             onClick={() => setShowPassword(!showPassword)}
              className="absolute right-6 top-[45px] text-gray-500 text-lg">
                 {
                 showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
                  }
-             </button>
+             </div>
              {
                 error ? <p className="text-sm text-red-500 mt-4">{error}</p> : ""
              }
