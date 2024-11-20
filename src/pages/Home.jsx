@@ -18,7 +18,7 @@ const Home = () => {
             <Banner></Banner>
             <Title></Title>
 
-             <div className=' w-11/12 mx-auto mb-10 lg:mb-24'>
+             <div className=' w-11/12 mx-auto px-0 md:px-12 mb-10 lg:mb-24'>
              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {
                   adventures.slice(0, 6).map(adventure=> <AdventureCard key={adventure.id} adventure={adventure}></AdventureCard>)

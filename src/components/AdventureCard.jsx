@@ -31,7 +31,7 @@ const AdventureCard = ({ adventure }) => {
 
       {/* Eco-Friendly Features */}
       <ul className="text-sm text-gray-600 mb-4">
-        <p className="text-base font-bold text-gray-500 mb-2">Eco Friendly Features:</p>
+        <p className="text-sm font-bold text-gray-700 mb-2">Eco Friendly Features:</p>
         {ecoFriendlyFeatures.map((feature, index) => (
           <li key={index} className="list-disc list-inside">
             {feature}

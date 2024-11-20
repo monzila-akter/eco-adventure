@@ -7,7 +7,7 @@ import { AuthContext } from "../provider/AuthProvider";
 const Navbar = () => {
 
   const {user, logOut} = useContext(AuthContext);
-  console.log(user);
+  // console.log(user);
 
   return (
     <div className="bg-lime-900  py-4">

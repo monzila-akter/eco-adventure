@@ -25,8 +25,8 @@ const UpdateProfile = () => {
         toast.success("Profile updated successfully!");
         navigate("/myProfile"); 
       })
-      .catch(error => {
-        console.log(error.message)
+      .catch(() => {
+        // console.log(error.message)
         toast.error("Failed to update profile. Please try again.")
       })
   };

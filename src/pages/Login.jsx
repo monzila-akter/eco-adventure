@@ -24,7 +24,7 @@ const handleSubmit = (e) => {
 
     loginUser(email, password)
     .then(result => {
-        console.log(result.user)
+        // console.log(result.user)
         setUser(result.user);
         toast.success("Logged in successfully!")
         navigate(location?.state ? location.state : "/")
