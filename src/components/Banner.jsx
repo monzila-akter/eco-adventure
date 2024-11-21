@@ -22,8 +22,7 @@ const Banner = () => {
           }`}
         >
           <img
-            src="https://i.ibb.co.com/5Ty77g4/240-F-347393164-Fg9t4-Iw-NALGvp-Hn5y-DZDRr7-DWi7fxd-G2.jpg" 
-            alt="Mountain Treks"
+            src="https://i.ibb.co.com/qxyq9qZ/739267-1920x1080-desktop-1080p-hiking-background-photo.jpg"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white">
