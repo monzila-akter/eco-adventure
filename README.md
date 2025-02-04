@@ -1,5 +1,7 @@
 ## 🌿 Eco Adventure – Explore Nature Responsibly
-(Add a clean screenshot here)
+
+![CoinCrafter Screenshot](https://github.com/monzila-akter/eco-adventure/blob/main/src/assets/eco-adventure-1.PNG)
+![CoinCrafter Screenshot](https://github.com/monzila-akter/eco-adventure/blob/main/src/assets/eco-adventure-2.PNG)
 
 ## 🚀 Project Overview
 - Eco Adventure is a dynamic eco-travel blog that showcases various eco-friendly travel experiences, such as mountain treks, ocean dives, and wildlife safaris. Users can browse adventure details, register for an account, and consult with experts before planning their eco-friendly trips. The platform ensures seamless authentication, personalized user profiles, and real-time adventure details.
