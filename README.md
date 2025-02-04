@@ -1,48 +1,81 @@
-# Project Information
+## 🌿 Eco Adventure – Explore Nature Responsibly
+(Add a clean screenshot here)
 
-## 1. Project Name :
+## 🚀 Project Overview
+- Eco Adventure is a dynamic eco-travel blog that showcases various eco-friendly travel experiences, such as mountain treks, ocean dives, and wildlife safaris. Users can browse adventure details, register for an account, and consult with experts before planning their eco-friendly trips. The platform ensures seamless authentication, personalized user profiles, and real-time adventure details.
 
-- ## Eco Adventure
+## 🛠️ Tech Stack
+Frontend: React.js, Tailwind CSS, DaisyUi
+Backend: Firebase Authentication, JSON Data
+Routing: React Router
+Animations: AOS (Animate on Scroll) / Animate.css
+Hosting: Netlify / Firebase
 
-## 2.The purpose of this project is to provide a secure platform for users to:
+## 🌟 Core Features
+✅ User Authentication: Email-password and Google login integration
+✅ Adventure Showcase: Dynamic adventure cards with eco-friendly features
+✅ Private Routes: Access adventure details & profile only when logged in
+✅ Consult an Expert: Google Meet link opens based on consultation hours
+✅ Profile Management: Users can view and update their profile information
+✅ Responsive UI: Optimized for mobile, tablet, and desktop
+✅ Error Handling: 404 error page for invalid routes
+✅ Dynamic Titles: Updates page title dynamically based on location
 
-- Register, log in, and log out of their accounts.
+## 📦 Dependencies
+### Below are the key dependencies used in the project:
 
-- View and update their profile information.
+1. Client-Side (Frontend)
+- React.js
+- React Router DOM
+- Firebase Authentication
+- Tailwind CSS
+- Daisy UI (for sliders)
+- AOS / Animate.css (for animations)
+- React Toastify (for notifications)
+2. Backend
+- irebase Authentication (User login & registration)
+- JSON Data (Static adventure details)
 
-- Reset their password if needed.
+## 🏗️ Installation & Setup
+### Follow these steps to set up the project locally:
 
-- Experience a responsive and intuitive user interface.
+### 1️⃣ Clone the Repository
+- bash
+- Copy
+- Edit
+- git clone <GITHUB_REPO_URL>
 
-## 3.Live URL:
+### 2️⃣ Install Dependencies
+### Navigate into the project directory and install required packages:
 
-- https://eco-adventure-f8cf4.web.app/
+- bash
+- Copy
+- Edit
+- cd eco-adventure
+- npm install
 
-## 4.Key Features:
+### 3️⃣ Set Up Environment Variables
+### Create a .env file in the root directory and add the following:
 
-- Authentication
+- env
+- Copy
+- Edit
+- REACT_APP_FIREBASE_API_KEY=your_firebase_api_key
+- REACT_APP_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+- REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+- REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+- REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+- REACT_APP_FIREBASE_APP_ID=your_app_id
 
-- Profile Management
+### 4️⃣ Run the Project Locally
+- bash
+- Copy
+- Edit
+- npm start  
 
-- Password Management
-
-- Error Handling and Notifications
-
-- Secure and Private Routes
-
-- Responsive Design
-
-## 4. NPM packages I have used:
-
-- react
-
-- react-router-dom
-
-- Firebase
-
-- react-hot-toast
-
-- tailwindCss
+## 🔗 Live Links & Resources
+1. Live Site: https://eco-adventure-f8cf4.web.app/
+2. GitHub Repo: https://github.com/monzila-akter/eco-adventure
 
 ## 5.Required document link:
 
